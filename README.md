@@ -17,7 +17,7 @@ The project respect some global principles like :
 
 This schema show the target architecture that the Terraform plan should deploy :
 
-![AWS Infrastructure with Terraform](https://github.com/kubernetes-incubator/kubespray/contrib/terraform/aws/docs/aws_kubespray.png)
+![AWS Infrastructure with Terraform](https://github.com/kubernetes-incubator/kubespray/blob/master/contrib/terraform/aws/docs/aws_kubespray.png)
 
 For more informations about the deployment on each cloud, please refer to the README file present in each directory of this repository.
 
