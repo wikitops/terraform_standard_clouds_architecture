@@ -114,3 +114,9 @@ variable "default_tags" {
   description = "Default tags for all resources"
   type = "map"
 }
+
+
+variable "aws_s3_buckets" {
+  description = "S3 bucket to create"
+  type = "list"
+}

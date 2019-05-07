@@ -9,10 +9,10 @@ environment_name = "Proof Of Concept"
 environment_shortname = "POC"
 
 # Access Key
-AWS_ACCESS_KEY_ID = "AKIAZAFGYYWA4XZKEWG3"
+AWS_ACCESS_KEY_ID = "AKIAZAFGYYWAYSTJK3UC"
 
 # Secret Key
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_SECRET_ACCESS_KEY = "U2s6xlVshI9Y67Vx8IFIoh1/3wF3pLdcaYgt8iMc"
 
 # EC2 SSH Key Name
 AWS_SSH_KEY_NAME = "ngiron"
@@ -52,3 +52,6 @@ default_tags = {
  Automate = "terraform"
  Autoscale = "false"
 }
+
+# Default AWS S3 bucket to create
+aws_s3_buckets = ["bucket-example-asdjnz"]
