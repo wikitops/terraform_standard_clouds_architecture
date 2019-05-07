@@ -41,7 +41,7 @@ data "aws_ami" "distro" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64*"]
   }
 
   filter {
@@ -77,18 +77,20 @@ variable "aws_bastion_num" {
     description = "Number of Bastion Nodes"
 }
 
-variable "aws_bastion_size" {
+variable "aws_bastion_type" {
     description = "EC2 Instance Size of Bastion Host"
 }
 
 /*
 * AWS EC2 Settings
+* The number should be divisable by the number of used
+* AWS Availability Zones without an remainder.
 */
 variable "aws_master_num" {
     description = "Number of Master Nodes"
 }
 
-variable "aws_master_size" {
+variable "aws_master_type" {
     description = "Instance size of Kube Master Nodes"
 }
 
@@ -96,7 +98,7 @@ variable "aws_worker_num" {
     description = "Number of Worker Nodes"
 }
 
-variable "aws_worker_size" {
+variable "aws_worker_type" {
     description = "Instance size of Worker Nodes"
 }
 
@@ -105,7 +107,7 @@ variable "aws_worker_size" {
 */
 variable "route53_private_domain" {
     description = "Private DNS domain to configure on Route53"
-    default = "wikitops.internal"
+    default = "ca.treeptik.internal"
 }
 
 variable "default_tags" {

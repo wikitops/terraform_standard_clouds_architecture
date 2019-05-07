@@ -1,0 +1,29 @@
+[all]
+treeptik-master0.ca.treeptik.internal ansible_host=10.250.206.186
+treeptik-master1.ca.treeptik.internal ansible_host=10.250.210.144
+treeptik-master2.ca.treeptik.internal ansible_host=10.250.204.102
+treeptik-worker0.ca.treeptik.internal ansible_host=10.250.193.194
+treeptik-worker1.ca.treeptik.internal ansible_host=10.250.209.236
+treeptik-worker2.ca.treeptik.internal ansible_host=10.250.193.105
+treeptik-worker3.ca.treeptik.internal ansible_host=10.250.210.53
+treeptik-bastion0.ca.treeptik.internal ansible_host=35.182.249.70
+treeptik-bastion1.ca.treeptik.internal ansible_host=35.183.94.34
+
+[bastion]
+treeptik-bastion0.ca.treeptik.internal ansible_host=35.182.249.70
+treeptik-bastion1.ca.treeptik.internal ansible_host=35.183.94.34
+
+[master]
+treeptik-master0.ca.treeptik.internal
+treeptik-master1.ca.treeptik.internal
+treeptik-master2.ca.treeptik.internal
+
+[node]
+treeptik-worker0.ca.treeptik.internal
+treeptik-worker1.ca.treeptik.internal
+treeptik-worker2.ca.treeptik.internal
+treeptik-worker3.ca.treeptik.internal
+
+[cluster:children]
+node
+master

@@ -7,7 +7,6 @@ variable "aws_cluster_name" {
     description = "Name of Cluster"
 }
 
-
 variable "aws_avail_zones" {
     description = "AWS Availability Zones Used"
     type = "list"
