@@ -115,8 +115,18 @@ variable "default_tags" {
   type = "map"
 }
 
-
+/*
+* AWS S3 Settings
+*/
 variable "aws_s3_buckets" {
-  description = "S3 bucket to create"
+  description = "S3 buckets to create"
+  type = "list"
+}
+
+/*
+* AWS ECR Settings
+*/
+variable "aws_ecr_names" {
+  description = "ECR repositories to create"
   type = "list"
 }

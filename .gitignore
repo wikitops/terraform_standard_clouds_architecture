@@ -7,3 +7,7 @@
 
 # Crash log files
 crash.log
+
+# Generated files
+aws/simple_cluster/simple_cluster.inventory
+aws/simple_cluster/ssh-bastion.config

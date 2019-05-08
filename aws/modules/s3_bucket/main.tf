@@ -1,7 +1,14 @@
 resource "aws_s3_bucket" "this" {
-  count  = "${length(var.aws_s3_bucket)}"
+  count         = "${length(var.buckets)}"
 
-  bucket = "${element(var.aws_s3_bucket, count.index)}"
+  bucket        = "${element(var.buckets, count.index)}"
+  acl           = "${var.acl}"
+  region        = "${var.region}"
+  force_destroy = "${var.force_destroy}"
 
-  tags   = "${var.tags}"
+  versioning {
+      enabled = "${var.versioning_enabled}"
+  }
+
+  tags          = "${var.tags}"
 }

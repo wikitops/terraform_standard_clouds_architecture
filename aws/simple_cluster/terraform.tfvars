@@ -9,10 +9,10 @@ environment_name = "Proof Of Concept"
 environment_shortname = "POC"
 
 # Access Key
-AWS_ACCESS_KEY_ID = "AKIAZAFGYYWAYSTJK3UC"
+AWS_ACCESS_KEY_ID = "AKIAZAFGYYWAST5UWHDL"
 
 # Secret Key
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_SECRET_ACCESS_KEY = "6bT6ORKYZOwVR499G/kxReVfm1ipBMnVUT1hK+3Z"
 
 # EC2 SSH Key Name
 AWS_SSH_KEY_NAME = "ngiron"
@@ -53,5 +53,8 @@ default_tags = {
  Autoscale = "false"
 }
 
-# Default AWS S3 bucket to create
+# Default AWS S3 buckets to create
 aws_s3_buckets = ["bucket-example-asdjnz"]
+
+# Default AWS ECR repositories to create
+aws_ecr_names = ["repository-example-asdjnz"]

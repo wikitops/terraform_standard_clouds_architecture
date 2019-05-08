@@ -1,6 +1,8 @@
 module "s3_bucket" {
   source        = "../modules/s3_bucket"
 
-  aws_s3_bucket = "${var.aws_s3_buckets}"
+  buckets       = "${var.aws_s3_buckets}"
+  region        = "${var.AWS_DEFAULT_REGION}"
+
   tags          = "${merge(var.default_tags, map("Name", "${var.aws_cluster_name}"))}"
 }
