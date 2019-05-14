@@ -45,6 +45,7 @@ resource "aws_route53_record" "bastions" {
 /*
 * ELB
 */
+
 module "elb-bastion" {
   source                      = "../modules/elb"
 
