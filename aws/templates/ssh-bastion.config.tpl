@@ -1,8 +1,8 @@
-Host ${public_ip_address_bastion}
-  Hostname ${public_ip_address_bastion}
+Host ${bastion_public_ip}
+  Hostname ${bastion_public_ip}
   StrictHostKeyChecking no
   ControlMaster auto
   ControlPersist 5m
 
-Host ${list_node} ${list_master}
-ProxyCommand ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -W %h:%p ${default_user}@${public_ip_address_bastion}
+# Host [OPTIONAL LIST OF NODES]
+# ProxyCommand ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -W %h:%p ${default_user}@${bastion_public_ip}

@@ -1,16 +1,16 @@
 # Terraform : Standard Architecture
 
-The aim of this project is to deploy the same simple architecture on any cloud thanks to Terraform.
+The purpose of this project is to deploy the same simple architecture on different cloud thanks to Terraform.
 
 ## Description
 
-The idea is to easily deploy a simple secure architecture on the main cloud providers to be able to test some tools or feature. Terraform is recommanded because it is reall simple to create, update and destroy everything whith that tool.
+The idea is to easily deploy a simple secure architecture on the main cloud providers to be able to test some tools or features.
 
 The project respect some global principles like :
 
 * One virtual private cloud using all the availability zones
 * Two different network : one public and one private
-* The public network can be access from Internet but the private cannot
+* The public network resources can be directly reached from Internet, the private network cannot be accessed without a gateway in the public network
 * A cluster of Bastion server is deployed to access the private network securely
 * The private network can access Internet throw a NAT Gateway deployed in the public network
 * The network rules are managed by security groups
@@ -25,13 +25,13 @@ For more informations about the deployment on each cloud, please refer to the RE
 
 To interact easily with Ansible, each plan may create this file : *ansible_inventory_CLOUDNAME
 
-This file is formated like an Ansible inventory host file and can be used by any playbooks.
+This file is formatted like an Ansible inventory host file and can be used by any playbooks.
 
 ### SSH Config
 
-To be able to connect on each private servers throw the bastion cluster, a file named : *ssh-bastion.config should be created by each plan to configure the SSH proxy pass.
+To be able to connect on each private servers throw the bastion cluster, a file named : *ssh-bastion.config is created by each plan to configure the SSH proxy command.
 
-This file can be used like that :
+This file can be used this way :
 
 ```
 $ ssh -F ./ssh-bastion.config USERNAME@SERVER.IP
@@ -48,7 +48,7 @@ These instructions will get you a copy of the project up and running on the clou
 What things you need to run this Terraform plan :
 
 * [Terraform](https://www.terraform.io/)
-* Configure the terraform.tfvars file of the cloud provider to be able to manage the architecture throw the API
+* Configure your local environment depending on the cloud provider
 
 It's recommended to read the README file in the cloud provider directory to get more information.
 
@@ -78,7 +78,7 @@ If you are agree with it, apply the plan :
 terraform apply
 ```
 
-Terraform will asked you to confirm your wish, just answer 'yes' :
+Terraform will asked you to confirm the plan, just answer 'yes' :
 
 ```
 Do you want to perform these actions?
@@ -110,4 +110,4 @@ Member of Wikitops : https://www.wikitops.io/
 
 ## Licence
 
-This project is licensed under MIT license. For the full text of the license, see the LICENSE file.
+This project is licensed under MIT license. For the full text of the license, see the [LICENSE](LICENSE) file.
